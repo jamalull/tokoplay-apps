@@ -1,0 +1,100 @@
+[{
+  "_id": {
+    "$oid": "64c240e91db62f3ae34a743c"
+  },
+  "productId": 321,
+  "linkProduct": "https://www.tokopedia.com/find/tas",
+  "title": "Tas Pink",
+  "price": 58000,
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c240e91db62f3ae34a743d"
+  },
+  "productId": 773,
+  "linkProduct": "https://www.tokopedia.com/find/tas",
+  "title": "Tas Hitam",
+  "price": 48000,
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c240e91db62f3ae34a743e"
+  },
+  "productId": 558,
+  "linkProduct": "https://www.tokopedia.com/find/tas",
+  "title": "Tas Cokelat",
+  "price": 38000,
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c240e91db62f3ae34a743f"
+  },
+  "productId": 997,
+  "linkProduct": "https://www.tokopedia.com/find/tas",
+  "title": "Tas Biru",
+  "price": 48000,
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c240e91db62f3ae34a7440"
+  },
+  "productId": 668,
+  "linkProduct": "https://www.tokopedia.com/find/tas",
+  "title": "Tas Merah",
+  "price": 58000,
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c240e91db62f3ae34a7441"
+  },
+  "productId": 321,
+  "linkProduct": "https://www.tokopedia.com/find/tas",
+  "title": "Tas Putih",
+  "price": 68000,
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c240e91db62f3ae34a7442"
+  },
+  "productId": 223,
+  "linkProduct": "https://www.tokopedia.com/find/tas",
+  "title": "Tas Abu-abu",
+  "price": 58000,
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c240e91db62f3ae34a7443"
+  },
+  "productId": 225,
+  "linkProduct": "https://www.tokopedia.com/find/tas",
+  "title": "Tas Hijau",
+  "price": 38000,
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c240e91db62f3ae34a7444"
+  },
+  "productId": 334,
+  "linkProduct": "https://www.tokopedia.com/find/tas",
+  "title": "Tas Kuning",
+  "price": 58000,
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c240e91db62f3ae34a7445"
+  },
+  "productId": 665,
+  "linkProduct": "https://www.tokopedia.com/find/tas",
+  "title": "Tas Maroon",
+  "price": 78000,
+  "videoId": 456
+}]

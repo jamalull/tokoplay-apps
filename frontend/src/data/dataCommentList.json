@@ -1,0 +1,78 @@
+[{
+  "_id": {
+    "$oid": "64c243a91db62f3ae34a744d"
+  },
+  "username": "Putri Kinan",
+  "comment": "Berapa harga produk nya kak ? Aku mau checkout nnihh",
+  "timestamp": {
+    "$date": "2023-07-27T10:15:05.391Z"
+  },
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c243a91db62f3ae34a744e"
+  },
+  "username": "Aura Kinan",
+  "comment": "Berapa harga produk nya kak ? Aku mau COD nnihh",
+  "timestamp": {
+    "$date": "2023-07-27T10:15:05.391Z"
+  },
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c243a91db62f3ae34a744f"
+  },
+  "username": "Wardah Hann",
+  "comment": "Berapa lama pengiriman ke Bandung kak ? Aku mau checkout nnihh",
+  "timestamp": {
+    "$date": "2023-07-27T10:15:05.391Z"
+  },
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c243a91db62f3ae34a7450"
+  },
+  "username": "Aurorra",
+  "comment": "Produk nya ready kan stok nya kak ?",
+  "timestamp": {
+    "$date": "2023-07-27T10:15:05.391Z"
+  },
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c243a91db62f3ae34a7451"
+  },
+  "username": "Miya",
+  "comment": "Apakah ada garansi jika produk rusak kak ?",
+  "timestamp": {
+    "$date": "2023-07-27T10:15:05.391Z"
+  },
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c243a91db62f3ae34a7452"
+  },
+  "username": "Eudora",
+  "comment": "Live sampe jam berapa kak ?",
+  "timestamp": {
+    "$date": "2023-07-27T10:15:05.391Z"
+  },
+  "videoId": 456
+},
+{
+  "_id": {
+    "$oid": "64c2816d340713836823c34d"
+  },
+  "username": "Kagura",
+  "comment": "Berapa harga produk nya kak ? Aku mau checkout nnihh",
+  "timestamps": {
+    "$date": "2023-07-27T14:38:37.865Z"
+  },
+  "videoId": 456,
+  "__v": 0
+}]
