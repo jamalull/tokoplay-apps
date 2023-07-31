@@ -1,14 +1,12 @@
-// import './App.css'
-import VideoCard from "./components/VideoCard"
-import VideoList from "./components/VideoList"
+import Navbar from "./components/Navbar"
+import Home from "./pages/Home"
 
 function App() {
 
   return (
     <>
-      <VideoList/>
-      
-      {/* <VideoCard/> */}
+      <Navbar/>
+      <Home/>
     </> 
   )
 }
