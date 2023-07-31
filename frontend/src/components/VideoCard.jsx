@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 function VideoCard(props) {
   return (
     <>
       <article
-        className="videoCard relative overflow-hidden rounded-lg shadow transition hover:shadow-lg"
+        className="videoCard max-[560px]:mx-auto max-[1024px]:mb-4 relative overflow-hidden rounded-lg shadow transition hover:shadow-lg"
       >
         <img
           alt="Office"
@@ -15,13 +15,13 @@ function VideoCard(props) {
 
         <div className="relative bg-gradient-to-t from-gray-900/25 to-gray-900/30 pt-2 sm:pt-1 lg:pt-2 p-2">
           <span
-            class="inline-flex mr-1 items-center justify-center rounded-md bg-red-500 px-2.5 py-0.5 text-white"
+            class="inline-flex mr-1 items-center justify-center rounded-md bg-red-500 px-2.5 py-[0.4px] text-white"
           >
             <p class="whitespace-nowrap font-medium">LIVE</p>
           </span>
 
           <span
-            class="inline-flex mr-1 items-center justify-center rounded-md bg-slate-500 px-2.5 py-0.5 text-white"
+            class="inline-flex mr-1 items-center justify-center rounded-md bg-[#2e2d2d80] px-2.5 py-0.5 text-white"
           >
             <svg
               viewBox="0 0 1024 1024"
@@ -38,7 +38,7 @@ function VideoCard(props) {
         </div>
 
         <div
-          className="relative bg-gradient-to-t from-gray-900/30 to-gray-900/25 pt-32 sm:pt-48 lg:pt-64"
+          className="relative bg-gradient-to-t from-gray-900/50 to-gray-900/25 pt-32 sm:pt-48 lg:pt-64"
         >
           <div className="p-2 sm:p-4">
             <time dateTime="2022-10-10" className="block text-xs text-white/90">
@@ -62,6 +62,6 @@ function VideoCard(props) {
       </article>
     </>
   )
-};
+}
 
-export default VideoCard;
+export default VideoCard
