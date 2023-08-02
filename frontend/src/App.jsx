@@ -1,12 +1,13 @@
-import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
+
+import Home from "./pages/Home" 
+// import Channel from "./pages/Channel"
 
 function App() {
 
   return (
     <>
-      <Navbar/>
       <Home/>
+      {/* <Channel/> */}
     </> 
   )
 }

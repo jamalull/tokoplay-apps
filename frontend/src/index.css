@@ -32,6 +32,9 @@ body {
 .videoCard {
   width: 240px;
 }
+.videocard-channel {
+  height: 580px;
+}
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
