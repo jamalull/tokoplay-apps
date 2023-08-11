@@ -22,7 +22,7 @@ function TabCategory() {
           <nav class="flex gap-2 overflow-x-scroll no-scrollbar py-1 pl-1" aria-label="Tabs">
             <a
               href="#"
-              className="shrink-0 rounded-2xl px-4 p-2 text-sm font-medium text-white/75 hover:bg-green-500/50 hover:text-white border border-green-500"
+              className="shrink-0 rounded-2xl px-4 p-2 text-sm font-medium text-white/75 bg-green-500/50 hover:bg-green-500/50 hover:text-white border border-green-500"
             >
               Live
             </a>
