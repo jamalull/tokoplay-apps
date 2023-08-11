@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 
 function NavbarChannel() {
   return (
     <>
       <div className="navbar-channel flex gap-2 mb-4">
-        <a href="#">
+        <Link to={"/"}>
           <svg fill="none" viewBox="0 0 15 15" height="24" width="24">
             <path
               fill="currentColor"
@@ -13,7 +14,7 @@ function NavbarChannel() {
               clipRule="evenodd"
             />
           </svg>
-        </a>
+        </Link>
         <p className="title flex-1 font-semibold">Edisi Cuci Gudang, Harga Hancur-hancuran. Termurah se-Tokopedia !!!</p>
 
         <span className="flex items-center gap-2 mr-10">
