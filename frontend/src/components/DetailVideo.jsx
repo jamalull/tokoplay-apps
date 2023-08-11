@@ -10,13 +10,18 @@ function DetailVideo() {
       <article
         className="videocard-channel mx-10 relative overflow-hidden rounded-lg shadow transition hover:shadow-lg"
       >
-        <img
+        <iframe className="absolute inset-0 h-full w-full object-cover"
+                width="560" height="315" src="https://www.youtube.com/embed/3y9SRQqgNuk" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+        </iframe>
+        
+        {/* <img
           alt="Office"
           src="https://images.unsplash.com/photo-1661956602116-aa6865609028?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
           className="absolute inset-0 h-full w-full object-cover"
-        />
+        /> */}
 
-        <div className="relative bg-gradient-to-t from-gray-900/25 to-gray-900/30 pt-2 sm:pt-1 lg:pt-2 p-2">
+        {/* <div className="relative bg-gradient-to-t from-gray-900/25 to-gray-900/30 pt-2 sm:pt-1 lg:pt-2 p-2">
           <span
             class="inline-flex mr-1 items-center justify-center rounded-md bg-red-500 px-2.5 py-[0.4px] text-white"
           >
@@ -60,19 +65,19 @@ function DetailVideo() {
               Kimbby Store
             </h3>
           </div>
-        </div>
+        </div> */}
       </article>
 
       <div className="flex items-center comment-field mx-10 mt-8">
         <label
-          for="Username"
+          for="Comment"
           class="relative mr-2 flex-1 block rounded-3xl border border-gray-200 shadow-sm focus-within:border-green-500/50 focus-within:ring-1 focus-within:ring-green-500/50"
         >
           <input
             type="text"
-            id="Username"
+            id="Comment"
             class="p-3 peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
-            placeholder="Username"
+            placeholder="Comment"
           />
 
           <span
