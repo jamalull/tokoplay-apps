@@ -1,8 +1,9 @@
 import React from 'react'
 import NavbarChannel from "./NavbarChannel"
 import VideoList from "./VideoList"
+import ProductList from "./ProductList"
 
-function DetailVideo() {
+function DetailVideo(props) {
   return (
     <>
       <NavbarChannel/>
@@ -12,7 +13,7 @@ function DetailVideo() {
       >
         <iframe className="absolute inset-0 h-full w-full object-cover"
                 width="560" height="315" src="https://www.youtube.com/embed/3y9SRQqgNuk" title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
         </iframe>
         
         {/* <img
@@ -68,33 +69,103 @@ function DetailVideo() {
         </div> */}
       </article>
 
-      <div className="flex items-center comment-field mx-10 mt-8">
-        <label
-          for="Comment"
-          class="relative mr-2 flex-1 block rounded-3xl border border-gray-200 shadow-sm focus-within:border-green-500/50 focus-within:ring-1 focus-within:ring-green-500/50"
-        >
-          <input
-            type="text"
-            id="Comment"
-            class="p-3 peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
-            placeholder="Comment"
-          />
+      <div className="flex overflow-x-scroll gap-2  product-field mx-10 mt-8">
+        <ProductList videoId = {props.videoId}/>
+      </div>
 
-          <span
-            class="pointer-events-none absolute start-5 top-0 -translate-y-1/2 p-0.5 bg-[#242424] text-xs text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs"
+      <div className="flex max-[900px]:flex-col gap-4 comment-field mx-10 mt-8">
+        <div className="overflow-y-scroll comment-box h-44 rounded-lg border flex-grow p-2">
+          {/* <p className="center">Comment Will be display in here ...</p> */}
+          <ul>
+            <li className="flex gap-2 ">
+              <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt=""  className="rounded-full mt-1" />
+              <div>
+                <p className="text-sm text-yellow-400">Profile Name</p>
+                <p className="text-comment text-xs mb-2">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-2 ">
+              <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt=""  className="rounded-full mt-1" />
+              <div>
+                <p className="text-sm text-yellow-400">Profile Name</p>
+                <p className="text-comment text-xs mb-2">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                </p>
+              </div>
+            </li>
+            <li className="flex gap-2 ">
+              <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt=""  className="rounded-full mt-1" />
+              <div>
+                <p className="text-sm text-yellow-400">Profile Name</p>
+                <p className="text-comment text-xs mb-2">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+        <div className="lg:w-96 flex flex-col gap-2">
+          <label
+            for="Comment"
+            class="relative mr-2 flex-1 block rounded-lg border border-gray-200 shadow-sm focus-within:border-green-500/50 focus-within:ring-1 focus-within:ring-green-500/50"
           >
-            Chat di sini...
-          </span>
-        </label>
+            <input
+              type="text"
+              id="Comment"
+              class="p-3 peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
+              placeholder="Comment"
+            />
 
-        <svg
-          fill="currentColor"
-          viewBox="0 0 16 16"
-          height="35"
-          width="35"
-        >
-          <path d="M8 1a2.5 2.5 0 012.5 2.5V4h-5v-.5A2.5 2.5 0 018 1zm3.5 3v-.5a3.5 3.5 0 10-7 0V4H1v10a2 2 0 002 2h10a2 2 0 002-2V4h-3.5z" />
-        </svg>
+            <span
+              class="pointer-events-none absolute start-5 top-0 -translate-y-1/2 p-0.5 bg-[#242424] text-xs text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs"
+            >
+              Type Your Username
+            </span>
+          </label>
+
+          <label
+            for="Comment"
+            class="relative mt-2 mr-2 flex-1 block rounded-lg border border-gray-200 shadow-sm focus-within:border-green-500/50 focus-within:ring-1 focus-within:ring-green-500/50"
+          >
+            <input
+              type="text"
+              id="Comment"
+              class="p-3 peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
+              placeholder="Comment"
+            />
+
+            <span
+              class="pointer-events-none absolute start-5 top-0 -translate-y-1/2 p-0.5 bg-[#242424] text-xs text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs"
+            >
+              Comment Here
+            </span>
+          </label>
+
+          <button className="bg-slate-500 hover:bg-slate-600 rounded-lg p-3">
+            Send Comment
+          </button>
+        </div>
       </div>
 
       <div className="mt-16">

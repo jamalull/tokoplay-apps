@@ -3,9 +3,8 @@ import React from 'react'
 function VideoCard(props) {
   return (
     <>
-      <a 
-        key={props.id}
-        href="channel">
+      <a
+        href={"channel/" + props.videoId}>
         
         <article
           className="videoCard max-[560px]:mx-auto max-[1024px]:mb-4 relative overflow-hidden rounded-lg shadow transition hover:shadow-lg"
@@ -19,13 +18,13 @@ function VideoCard(props) {
 
           <div className="relative bg-gradient-to-t from-gray-900/25 to-gray-900/30 pt-2 sm:pt-1 lg:pt-2 p-2">
             <span
-              class="inline-flex mr-1 items-center justify-center rounded-md bg-red-500 px-2.5 py-[0.4px] text-white"
+              className="inline-flex mr-1 items-center justify-center rounded-md bg-red-500 px-2.5 py-[0.4px] text-white"
             >
-              <p class="whitespace-nowrap font-medium">LIVE</p>
+              <p className="whitespace-nowrap font-medium">LIVE</p>
             </span>
 
             <span
-              class="inline-flex mr-1 items-center justify-center rounded-md bg-[#2e2d2d80] px-2.5 py-0.5 text-white"
+              className="inline-flex mr-1 items-center justify-center rounded-md bg-[#2e2d2d80] px-2.5 py-0.5 text-white"
             >
               <svg
                 viewBox="0 0 1024 1024"
@@ -36,7 +35,7 @@ function VideoCard(props) {
                 <path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z" />
               </svg>
 
-              <p class="whitespace-nowrap text-sm ml-1">2 rb</p>
+              <p className="whitespace-nowrap text-sm ml-1">2 rb</p>
             </span>
 
           </div>
