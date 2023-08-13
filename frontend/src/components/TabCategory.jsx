@@ -4,11 +4,12 @@ function TabCategory() {
   return (
     <>
       <div>
-        <div class="sm:hidden">
-          <label for="Tab" class="sr-only">Tab</label>
+        <div className="sm:hidden">
+          <label htmlFor="Tab" className="sr-only">Tab</label>
 
-          <select id="Tab" class="w-full rounded-md border-gray-200">
-            <option select>Live</option>
+          <select id="Tab" className="w-full rounded-md border-gray-200">
+            {/* <option select>Live</option> */}
+            <option>Live</option>
             <option>Explore</option>
             <option>Terbaru</option>
             <option>Upcoming</option>
@@ -18,8 +19,8 @@ function TabCategory() {
           </select>
         </div>
 
-        <div class="hidden sm:block">
-          <nav class="flex gap-2 overflow-x-scroll no-scrollbar py-1 pl-1" aria-label="Tabs">
+        <div className="hidden sm:block">
+          <nav className="flex gap-2 overflow-x-scroll no-scrollbar py-1 pl-1" aria-label="Tabs">
             <a
               href="#"
               className="shrink-0 rounded-2xl px-4 p-2 text-sm font-medium text-white/75 bg-green-500/50 hover:bg-green-500/50 hover:text-white border border-green-500"
