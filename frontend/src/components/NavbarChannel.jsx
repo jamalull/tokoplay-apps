@@ -21,7 +21,7 @@ function NavbarChannel() {
           <img
             alt="Man"
             src="https://images.tokopedia.net/img/cache/850/BgtCLw/2022/5/9/4eb9a3c5-36e2-4207-9f2c-acb5100cad2d.jpg?ect=4g"
-            class="h-8 w-8 rounded-full object-cover"
+            className="h-8 w-8 rounded-full object-cover"
           />
           <p className="title flex-1 font-semibold">Kimboy Store</p>
 

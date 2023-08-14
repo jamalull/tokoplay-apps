@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ProductCard from "./ProductCard"
-import dataProductList from "../data/dataProductList.json"
+// import dataProductList from "../data/dataProductList.json"
+import { GlobalContext } from "../context/GlobalContext";
 
 function ProductList(props) {
+  
+  const { state } = useContext(GlobalContext);
+  const { dataProduct } = state;
+  
   let id = props.videoId;
+
   return (
     <>
-      {console.log(props.videoId)}
-      {
-        dataProductList.map((res, index) => {
+      { dataProduct !== null && 
+        dataProduct.map((res, index) => {
           if(res.videoId == id){
             return(
-              <ProductCard title = {res.title} imgProduct = {res.imgProduct} price = {res.price}/>
+              <ProductCard key={index} title = {res.title} imgProduct = {res.imgProduct} linkProduct = {res.linkProduct} price = {res.price}/>
             )
           }
       })}

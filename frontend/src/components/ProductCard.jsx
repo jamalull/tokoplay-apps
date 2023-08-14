@@ -13,7 +13,7 @@ function ProductCard(props) {
         />
 
         <div className="p-2 px-4">
-          <a href="#">
+          <a href={props.linkProduct} target="_blank">
             <h3 className="text-lg font-medium text-gray-900">
               {props.title}
             </h3>
@@ -24,7 +24,8 @@ function ProductCard(props) {
           </p>
 
           <a
-            href="#"
+            href={props.linkProduct}
+            target="_blank"
             className="group mt-2 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
           >
             Shop Now

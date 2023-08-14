@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import NavbarChannel from "./NavbarChannel"
 import VideoList from "./VideoList"
 import ProductList from "./ProductList"
+import CommentList from "./CommentList"
+import { GlobalContext } from "../context/GlobalContext"
 
 function DetailVideo(props) {
+  const { state } = useContext(GlobalContext);
+  const { dataVideo } = state;
+
   return (
     <>
       <NavbarChannel/>
@@ -11,10 +16,18 @@ function DetailVideo(props) {
       <article
         className="videocard-channel mx-10 relative overflow-hidden rounded-lg shadow transition hover:shadow-lg"
       >
-        <iframe className="absolute inset-0 h-full w-full object-cover"
-                width="560" height="315" src="https://www.youtube.com/embed/3y9SRQqgNuk" title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
-        </iframe>
+        {dataVideo !== null && 
+          dataVideo.map((res, index) => {
+            if(res.videoId == props.videoId){
+              return(
+                <iframe key={index} className="absolute inset-0 h-full w-full object-cover"
+                        width="560" height="315" src={res.video} title="YouTube video player" frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
+                </iframe>
+              )
+            }
+          })
+        }
         
         {/* <img
           alt="Office"
@@ -73,100 +86,7 @@ function DetailVideo(props) {
         <ProductList videoId = {props.videoId}/>
       </div>
 
-      <div className="flex max-[900px]:flex-col gap-4 comment-field mx-10 mt-8">
-        <div className="overflow-y-scroll comment-box h-44 rounded-lg border flex-grow p-2">
-          {/* <p className="center">Comment Will be display in here ...</p> */}
-          <ul>
-            <li className="flex gap-2 ">
-              <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt=""  className="rounded-full mt-1" />
-              <div>
-                <p className="text-sm text-yellow-400">Profile Name</p>
-                <p className="text-comment text-xs mb-2">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                </p>
-              </div>
-            </li>
-            <li className="flex gap-2 ">
-              <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt=""  className="rounded-full mt-1" />
-              <div>
-                <p className="text-sm text-yellow-400">Profile Name</p>
-                <p className="text-comment text-xs mb-2">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                </p>
-              </div>
-            </li>
-            <li className="flex gap-2 ">
-              <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt=""  className="rounded-full mt-1" />
-              <div>
-                <p className="text-sm text-yellow-400">Profile Name</p>
-                <p className="text-comment text-xs mb-2">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse, quos voluptatum consequuntur non suscipit ipsam?
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        
-        <div className="lg:w-96 flex flex-col gap-2">
-          <label
-            for="Comment"
-            class="relative mr-2 flex-1 block rounded-lg border border-gray-200 shadow-sm focus-within:border-green-500/50 focus-within:ring-1 focus-within:ring-green-500/50"
-          >
-            <input
-              type="text"
-              id="Comment"
-              class="p-3 peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
-              placeholder="Comment"
-            />
-
-            <span
-              class="pointer-events-none absolute start-5 top-0 -translate-y-1/2 p-0.5 bg-[#242424] text-xs text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs"
-            >
-              Type Your Username
-            </span>
-          </label>
-
-          <label
-            for="Comment"
-            class="relative mt-2 mr-2 flex-1 block rounded-lg border border-gray-200 shadow-sm focus-within:border-green-500/50 focus-within:ring-1 focus-within:ring-green-500/50"
-          >
-            <input
-              type="text"
-              id="Comment"
-              class="p-3 peer border-none bg-transparent placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0"
-              placeholder="Comment"
-            />
-
-            <span
-              class="pointer-events-none absolute start-5 top-0 -translate-y-1/2 p-0.5 bg-[#242424] text-xs text-white transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-0 peer-focus:text-xs"
-            >
-              Comment Here
-            </span>
-          </label>
-
-          <button className="bg-slate-500 hover:bg-slate-600 rounded-lg p-3">
-            Send Comment
-          </button>
-        </div>
-      </div>
+      <CommentList videoId = {props.videoId}/>
 
       <div className="mt-16">
         <p className="font-bold mb-6">Explorasi video lainnya</p>

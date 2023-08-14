@@ -22,7 +22,7 @@ function VideoList() {
       {dataVideo !== null && 
         dataVideo.map((res, index)=> {
         return (
-          <VideoCard key={index} videoId={res.videoId} thumbnail={res.thumbnail} name={res.altImage} />
+          <VideoCard key={index} videoId={res.videoId} thumbnail={res.thumbnail} name={res.altImage} views ={res.views} />
         )
       })}
     </div>
