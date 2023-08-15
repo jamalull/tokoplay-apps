@@ -15,3 +15,6 @@ Use the package manager [npm](https://docs.npmjs.com/cli/v8/commands/npm-install
 ```bash
 npm install
 ```
+```bash
+Apps has been deploy on this link (https://tokoplay-apps.netlify.app/)
+```

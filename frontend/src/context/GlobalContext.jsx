@@ -13,7 +13,7 @@ export const GlobalProvider = (props) => {
   useEffect(() => {
     if (fetchStatus === true) {
       axios
-        .get("http://localhost:3000/api/video")
+        .get("https://tokoplay-backend.cyclic.cloud/api/video")
         .then((res) => {
           setDataVideo([...res.data]);
           console.log(res.data);
@@ -24,7 +24,7 @@ export const GlobalProvider = (props) => {
 
         
       axios
-        .get("http://localhost:3000/api/product")
+        .get("https://tokoplay-backend.cyclic.cloud/api/product")
         .then((res) => {
           setDataProduct([...res.data]);
           console.log(res.data);
@@ -34,7 +34,7 @@ export const GlobalProvider = (props) => {
         });
 
       axios
-        .get("http://localhost:3000/api/comment")
+        .get("https://tokoplay-backend.cyclic.cloud/api/comment")
         .then((res) => {
           setDataComment([...res.data]);
           console.log(res.data);
@@ -69,7 +69,7 @@ export const GlobalProvider = (props) => {
     } = inputComment;
 
     axios
-      .post("http://localhost:3000/api/comment",{ videoId, username, comment })
+      .post("https://tokoplay-backend.cyclic.cloud/api/comment",{ videoId, username, comment })
       .then((res) => {
         console.log(res);
         setFetchStatus(true);
